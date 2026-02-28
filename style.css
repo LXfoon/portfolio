@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cormorant+SC:wght@300;400;500;600;700&family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    /* border: red 1px solid; */
+}
+
+body{
+    background-color: #FFFBFC;
+}
+
+html{
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-padding-top: 10%;
+}
+
+#home, #amPart, #skills, #projects{
+    scroll-snap-align: start;
+    scroll-behavior: smooth;
+}
+
+.hoverIcon{
+    position: absolute;
+    bottom: 0;
+    right: 1%;
+    color: #dba9b2;
+}
+
+#summary, .abtMe, #projects{
+    scrollbar-width: thin;
+    scrollbar-color: white #f7dbe0;
+}
+
+#summary:hover > .hoverIcon, .amWrap:hover > .hoverIcon{
+    opacity: 0;
+}
+
+#nav{
+    position: fixed;
+    z-index: 1000;
+
+    display: flex;
+    top: 0;
+    margin: auto;
+    width: 50%;
+    padding: 0 25%;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #FFFBFC;
+    border-bottom: 2px #D2B77D solid;    
+    border-radius: 3%;
+}
+
+#nav a {
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.5em;
+  color:#936E1F;
+  text-align: center;
+  padding: 3%;
+  text-decoration: none;
+}
+
+#nav a:hover {
+  color: #d19e2f;
+}
+
+#imgPart{
+    margin: 1% auto;
+    padding-top: 6%;
+}
+
+img{
+    display: block;
+    margin: auto;
+    width: 15%;
+    height: 10%;
+    border: #D2B77D 2px solid;
+}
+
+#imgPart h2{
+  text-align: center;
+  font-family: "Amiri Quran", serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  color: #D2B77D;
+}
+
+#summary, .abtMe{
+    background-color: #f7dbe0;
+    width: 50%;
+    height: 200px;
+    max-height: 200px;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    overflow-y: hidden;
+    position: relative;
+
+    box-shadow: 10px 10px rgba(201, 104, 118, 0.28);
+}
+
+.abtMe{
+    margin-bottom: 3%;
+}
+
+#summary:hover, .abtMe:hover{
+    overflow-y: auto;
+}
+
+#sWrap, .amWrap{
+    padding-left: 2%;
+}
+
+
+#summary h1, .abtMe h1{
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #F4617D;
+  text-align: left;
+}
+
+#emoticon{
+    width:fit-content;
+    position: absolute;
+    top: 5%;
+    left: 93%;
+    color: #F4617D;
+}
+
+#summary p, .abtMe p, .abtMe ul li{
+    font-family: "Amiri", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #BE6677;
+}
+
+#interim, #interim:visited{
+    color: #BE6677;
+}
+
+#interim:hover{
+    color: #ea8599;
+}
+
+#link{
+    display: block;
+    margin: 2% auto;
+    width: max-content;
+    height: max-content;
+    /* padding: 10%; */
+    /* padding-top: 1%; */
+    text-align: center;
+    color: #9E182B;
+}
+
+#link a{
+    text-decoration: none;
+    color: #9E182B;
+    padding: 0 5px;
+}
+
+#link a:hover{
+    color: #dd445b;
+}
+
+#amSub{
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+}
+
+.edSub{
+    width: 30%;
+}
+
+h1{
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #F4617D;
+  text-align: center;
+  padding: 2%;
+}
+
+footer p{
+    text-align: center;
+    font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #b9495d;
+}
+
+.skillCat{
+    margin: 4% 0;
+    margin-bottom: 5%;
+}
+
+.skillCat h2{
+    color: #F4617D;
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 5%;
+    text-align: center;
+}
+
+#skillBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5% 2%;
+    gap: 2%;
+}
+
+.oneSkill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 10%;
+    height: 35px;
+    background-color: #FFEDF1;
+    color: #A47001;
+    font-size: 1.25vw;
+    letter-spacing: 6%;
+    border: #D8CBB0 1px solid;
+    border-radius: 10px;
+}
+
+#projWrap{
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+}
+
+.projCat{
+    position: relative;
+    width: 20%;
+    height: 50vh;
+    background-color: #FFEDF1;
+    box-shadow: 10px 10px rgba(201, 104, 118, 0.28);
+    margin: 4% 0;
+
+    border-radius: 20px;
+}
+
+.projCat:hover{
+    transition: ease-in 0.2s;
+    box-shadow: 10px 10px rgba(201, 104, 118, 0.7);
+}
+
+.hamburger{
+    position: absolute;
+    top: 2%;
+    right: 4%;
+    color: #BE6677;
+}
+
+.hamburger:hover{
+    color: #dc9da9;
+}
+
+.projCat img{
+    width: 98%;
+    height: 70%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.projHalf{
+    position: absolute;
+    bottom: 0%;
+    overflow: hidden;
+    background-color: #F3C4CF;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    min-height: 30%;
+    max-height: 50px;
+}
+
+.projHalf:hover{
+    overflow: auto;
+}
+
+.projHalf h3{
+    margin-top: 2%;
+    color: #A47001;
+    font-family: "Cormorant SC", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.projHalf p{
+    font-family: "Amiri", serif;
+    font-weight: 400;
+    font-style: normal; 
+    color: #6E592C;
+}
+
+.projHalf h3, .projHalf p{
+    margin-left: 5%;
+}
+
+#projects{
+    margin-bottom: 3%;
+}
